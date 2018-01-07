@@ -1,0 +1,14 @@
+Host aws
+	HostName 52.20.119.173
+	User alik
+	IdentityFile ~/.ssh/aws
+
+Host veolia
+    HostName 212.42.197.57
+    User tigran
+    IdentityFile ~/.ssh/veolia
+
+Host mega
+    HostName mega-real.ru
+    User mega
+    IdentityFile ~/.ssh/id_rsa

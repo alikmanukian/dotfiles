@@ -25,7 +25,8 @@ createLink() {
             rm $2
             ln -s $1 $2
         fi
-        
+    else
+        ln -s $1 $2
     fi
 }
 
@@ -37,10 +38,18 @@ createLink `pwd`/bash/.bash_profile ~/.bash_profile
 
 createLink `pwd`/git/.gitconfig ~/.gitconfig
 
+if [ ! -d ~/.ssh ]; then
+    mkdir -m 700 ~/.ssh
+fi
+createLink `pwd`/ssh/config ~/.ssh/config
 
 if ! grep ". ~/.bash_profile" ~/.zshrc > /dev/null; then 
 echo "
 if [ -f ~/.bash_profile ]; then 
     . ~/.bash_profile 
 fi" >> ~/.zshrc
+fi
+
+if [ ! -f ~/dotfiles ]; then
+    ln -s `pwd` ~/dotfiles
 fi
