@@ -6,9 +6,22 @@ Host aws
 Host veolia
     HostName 212.42.197.57
     User tigran
-    IdentityFile ~/.ssh/veolia
+	IdentityFile ~/.ssh/veolia
 
 Host mega
     HostName mega-real.ru
     User mega
-    IdentityFile ~/.ssh/id_rsa
+
+Host mega.root
+    HostName mega-real.ru
+    User root
+
+Host mega2.root
+    HostName 138.201.223.197
+    User root
+
+Host techbuddy.io
+    HostName boka.techbuddy.io
+    IdentityFile ~/.ssh/accontech
+    User ec2-user
+    ForwardAgent yes
