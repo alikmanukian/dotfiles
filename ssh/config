@@ -1,12 +1,14 @@
 Host aws
 	HostName 52.20.119.173
-	User alik
-	IdentityFile ~/.ssh/aws
+	User ubuntu
+	IdentityFile ~/.ssh/aws-n-virginia.pem
+    ForwardAgent yes
 
 Host veolia
     HostName 212.42.197.57
     User tigran
 	IdentityFile ~/.ssh/veolia
+    ForwardAgent yes
 
 Host mega
     HostName mega-real.ru
@@ -26,53 +28,15 @@ Host tb
     User ec2-user
     ForwardAgent yes
 
-Host aws-tb
-    HostName 35.153.7.55
-    IdentityFile ~/.ssh/techbuddy-aws
-    User ubuntu
-    ForwardAgent yes
-
 Host aws-dev1
-    HostName 34.203.227.172
+    HostName 34.207.156.20
     IdentityFile ~/.ssh/aws-n-virginia.pem
     User ubuntu
     ForwardAgent yes
 
 Host aws-dev2
-    HostName 54.173.46.0
+    HostName 52.86.104.186
     IdentityFile ~/.ssh/aws-n-virginia.pem
     User ubuntu
     ForwardAgent yes
 
-Host aws-dev3
-    HostName 54.86.131.205
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
-
-Host aws-dev4
-    HostName 54.159.1.246
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
-
-Host aws-dev5
-    HostName 34.207.72.99
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
-
-Host dm1
-    HostName 0.0.0.0
-    Port 32774
-    IdentityFile ~/.ssh/id_rsa
-    User root
-    ForwardAgent yes
-
-
-Host dm2
-    HostName 0.0.0.0
-    Port 32773
-    IdentityFile ~/.ssh/id_rsa
-    User root
-    ForwardAgent yes
