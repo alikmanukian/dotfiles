@@ -1,4 +1,8 @@
 SESSION=dev
+
+ssh-add ~/.ssh/accontech
+ssh-add ~/.ssh/aws
+
 cd ~/www/accontech/techbuddy
 tmux new-session -d -s $SESSION
 
