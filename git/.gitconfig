@@ -1,7 +1,7 @@
 [core]
-	excludesfile = /Users/alik/.gitignore_global
+	excludesfile = /Users/alik/.gitignore
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	cmd = "/usr/bin/opendiff \"$2\" \"$5\" -merge \"$1\" "
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
@@ -29,3 +29,7 @@
     # git resolve conflict by getting their version of file
     resolve-their = "!f() { git checkout --theirs \"$@\" && git add \"$@\"; }; f"
     commit-as = "!f() { git commit --author \"$@\" }; f"
+[commit]
+	template = /Users/alik/.stCommitMsg
+[diff]
+	external = /Users/alik/dotfiles/git/git-diff-cmd.sh
