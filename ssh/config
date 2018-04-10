@@ -28,18 +28,6 @@ Host tb-io
     User ec2-user
     ForwardAgent yes
 
-Host aws-dev1
-    HostName 34.207.156.20
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
-
-Host aws-dev2
-    HostName 52.86.104.186
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
-
 Host tb-dev1
     HostName 34.206.1.133
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
@@ -52,9 +40,3 @@ Host tb-dev2
     User ubuntu
     ForwardAgent yes
 
-
-Host donamix
-    HostName 45.32.153.41
-    User root
-    IdentityFile ~/.ssh/aws
-    ForwardAgent yes
