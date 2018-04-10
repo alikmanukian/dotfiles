@@ -22,7 +22,7 @@ Host mega2.root
     HostName 138.201.223.197
     User root
 
-Host tb
+Host tb-io
     HostName boka.techbuddy.io
     IdentityFile ~/.ssh/accontech
     User ec2-user
@@ -40,3 +40,21 @@ Host aws-dev2
     User ubuntu
     ForwardAgent yes
 
+Host tb-dev1
+    HostName 34.206.1.133
+    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
+    User ubuntu
+    ForwardAgent yes
+
+Host tb-dev2
+    HostName 34.201.42.25
+    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
+    User ubuntu
+    ForwardAgent yes
+
+
+Host donamix
+    HostName 45.32.153.41
+    User root
+    IdentityFile ~/.ssh/aws
+    ForwardAgent yes
