@@ -1,14 +1,15 @@
+Host *
+    ForwardAgent yes
+
 Host aws
 	HostName 52.20.119.173
 	User ubuntu
 	IdentityFile ~/.ssh/aws-n-virginia.pem
-    ForwardAgent yes
 
 Host veolia
     HostName 212.42.197.57
     User tigran
 	IdentityFile ~/.ssh/veolia
-    ForwardAgent yes
 
 Host mega
     HostName mega-real.ru
@@ -26,35 +27,28 @@ Host tb-io
     HostName boka.techbuddy.io
     IdentityFile ~/.ssh/accontech
     User ec2-user
-    ForwardAgent yes
-
-Host aws-dev1
-    HostName 34.207.156.20
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
-
-Host aws-dev2
-    HostName 52.86.104.186
-    IdentityFile ~/.ssh/aws-n-virginia.pem
-    User ubuntu
-    ForwardAgent yes
 
 Host tb-dev1
-    HostName 34.206.1.133
+    HostName 18.207.103.177
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
-    ForwardAgent yes
 
 Host tb-dev2
     HostName 34.201.42.25
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
-    ForwardAgent yes
-
 
 Host donamix
     HostName 45.32.153.41
     User root
-    IdentityFile ~/.ssh/aws
-    ForwardAgent yes
+    IdentityFile ~/.ssh/id_rsa
+
+Host ng
+    HostName 46.36.217.31
+    User fastuser
+    IdentityFile ~/.ssh/fastvps
+
+Host accontech
+    HostName accontech.com 
+    User mpyuz142
+    IdentityFile ~/.ssh/accontech
