@@ -144,10 +144,6 @@ let g:tagbar_type_javascript = {
     \]
     \}
 
-" Открытие файла .vimrc в новой вкладке в активной панели
-nnoremap <F4> :tabe ~/.vimrc<CR>:tabm 0<CR>
-" Открытие новой вкладки
-nnoremap <c-t> :tabnew<cr>
 
 " Airline
 " имя файла + расширение :tab help filename-modifiers
@@ -189,7 +185,9 @@ nmap fs <Plug>(easymotion-s)
 nmap fl <Plug>(easymotion-sl)
 
 " Emmet разворачивать аббревиатуру по нажатию на <C-e>
-let g:user_emmet_expandabbr_key = '<C-e>'
+let g:user_emmet_mode='a'    "enable all function in all mode.
+let g:user_emmet_leader_key='<C-e>'
+" let g:user_emmet_expandabbr_key = '<C-e>'
 
 " NerdCommenter
 " Add spaces after comment delimiters by default
@@ -238,12 +236,24 @@ let g:phpqa_codesniffer_args = "--standard=PSR2"
 
 " GLOBAL MAPPINGS ----------------------------
 
-" Reaload vimrc
+" Открытие файла .vimrc в новой вкладке в активной панели
+nmap <F4> :tabedit $MYVIMRC<cr>:tabm 0<cr>
+
+" Reload vimrc
 nnoremap <F5> :w<CR>:so $MYVIMRC<CR>
 
 " Space to toggle folds
 nnoremap <space> za
 vnoremap <space> za
+
+" Открытие новой вкладки
+nnoremap <c-t> :tabnew<cr>
+
+" AUTO COMMMANDS ----------------------------
+
+" Auto source .vimrc after save
+autocmd BufWritePost .vimrc source %
+
 
 " GLOBAL SETTINGS ----------------------------
 

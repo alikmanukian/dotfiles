@@ -1,5 +1,7 @@
 # bash_profile
 
+export PATH=$PATH:~/.composer/vendor/bin
+
 dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }

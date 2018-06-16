@@ -1,7 +1,8 @@
 [core]
 	excludesfile = /Users/alik/.gitignore
+	autocrlf = input
 [difftool "sourcetree"]
-	cmd = "/usr/bin/opendiff \"$2\" \"$5\" -merge \"$1\" "
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
