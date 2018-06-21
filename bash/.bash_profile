@@ -6,6 +6,16 @@ dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
 }
 
+# transfer to coder.am:8085
+transfer() {
+    # write to output to tmpfile because of progress bar
+    tmpfile=$( mktemp -t transferXXX )
+    curl --progress-bar --upload-file $1 http://coder.am:8085/$(basename $1) >> $tmpfile;
+    cat $tmpfile | tee -a ~/.transfers;
+    rm -f $tmpfile;
+    echo "\n" >> ~/.transfers;
+}
+
 # aliases
 alias reload="source ~/.bash_profile"
 alias dcm="docker-compose"
@@ -14,3 +24,4 @@ alias show-hidden-files="defaults write com.apple.finder AppleShowAllFiles YES; 
 alias hide-hidden=files="defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app"
 alias tmuxtb="~/dotfiles/tmux/scripts/techbuddy.sh"
 alias veoliadb="ssh -L 4000:192.168.50.21:3306 veolia"
+alias transfer=transfer
