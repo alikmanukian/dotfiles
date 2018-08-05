@@ -1,6 +1,7 @@
 # bash_profile
 
-export PATH=$PATH:~/.composer/vendor/bin
+export PATH=$PATH:~/.composer/vendor/bin:/usr/local/bin
+export PATH=$PATH:~/Development/flutter/bin
 
 dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
