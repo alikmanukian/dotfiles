@@ -4,7 +4,8 @@ Host *
 Host aws
 	HostName 52.20.119.173
 	User ubuntu
-	IdentityFile ~/.ssh/aws-n-virginia.pem
+	# IdentityFile ~/.ssh/aws-n-virginia.pem
+    IdentityFile ~/.ssh/aws
 
 Host veolia
     HostName 212.42.197.57
@@ -24,12 +25,12 @@ Host mega2.root
     User root
 
 Host tb-io
-    HostName boka.techbuddy.io
+    HostName techbuddy.io
     IdentityFile ~/.ssh/accontech
     User ec2-user
 
 Host tb-dev1
-    HostName 18.207.103.177
+    HostName 34.237.141.129
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 
@@ -38,10 +39,10 @@ Host tb-dev2
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 
-Host donamix
-    HostName 45.32.153.41
-    User root
-    IdentityFile ~/.ssh/id_rsa
+Host tb-staging
+    HostName 54.91.37.164
+    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
+    User ubuntu
 
 Host ng
     HostName 46.36.217.31
