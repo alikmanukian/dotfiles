@@ -30,17 +30,22 @@ Host tb-io
     User ec2-user
 
 Host tb-dev1
-    HostName 34.237.141.129
+    HostName 34.224.199.115
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 
 Host tb-dev2
-    HostName 34.201.42.25
+    HostName 107.20.88.213
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 
 Host tb-staging
-    HostName 54.91.37.164
+    HostName 34.193.21.31
+    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
+    User ubuntu
+
+Host tb-retail
+    HostName 54.146.69.157
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 

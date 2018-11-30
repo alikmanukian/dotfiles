@@ -26,3 +26,8 @@ alias hide-hidden=files="defaults write com.apple.finder AppleShowAllFiles NO; k
 alias tmuxtb="~/dotfiles/tmux/scripts/techbuddy.sh"
 alias veoliadb="ssh -L 4000:192.168.50.21:3306 veolia"
 alias transfer=transfer
+
+alias ssh-staging="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-staging;"
+alias ssh-io="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-io;"
+alias ssh-dev1="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-dev1;"
+alias ssh-dev2="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-dev2;"
