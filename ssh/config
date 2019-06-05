@@ -24,37 +24,8 @@ Host mega2.root
     HostName 138.201.223.197
     User root
 
-Host tb-io
-    HostName techbuddy.io
-    IdentityFile ~/.ssh/accontech
-    User ec2-user
-
-Host tb-dev1
-    HostName 34.224.199.115
-    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
-    User ubuntu
-
-Host tb-dev2
-    HostName 107.20.88.213
-    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
-    User ubuntu
-
-Host tb-staging
-    HostName 34.193.21.31
-    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
-    User ubuntu
-
-Host tb-retail
-    HostName 54.146.69.157
-    IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
-    User ubuntu
-
 Host ng
     HostName 46.36.217.31
     User fastuser
     IdentityFile ~/.ssh/fastvps
 
-Host accontech
-    HostName accontech.com 
-    User mpyuz142
-    IdentityFile ~/.ssh/accontech
