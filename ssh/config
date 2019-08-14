@@ -12,6 +12,11 @@ Host veolia
     User tigran
 	IdentityFile ~/.ssh/veolia
 
+Host veolia-interactive
+    HostName 212.42.197.55
+    User tigran
+    IdentityFile ~/.ssh/veolia
+
 Host mega
     HostName mega-real.ru
     User mega
@@ -25,17 +30,17 @@ Host mega2.root
     User root
 
 Host tb-io
-    HostName techbuddy.io
+    HostName 52.213.74.161
     IdentityFile ~/.ssh/accontech
     User ec2-user
 
 Host tb-dev1
-    HostName 34.237.141.129
+    HostName 34.224.199.115
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 
 Host tb-dev2
-    HostName 34.201.42.25
+    HostName 107.20.88.213
     IdentityFile ~/.ssh/aws-techbuddy-nvirginia.pem
     User ubuntu
 
@@ -50,6 +55,30 @@ Host ng
     IdentityFile ~/.ssh/fastvps
 
 Host accontech
-    HostName accontech.com 
+    HostName accontech.com
     User mpyuz142
     IdentityFile ~/.ssh/accontech
+
+Host cp.dev
+    HostName dev.concreteplayground.com
+    User deploy
+    IdentityFIle ~/.ssh/astgeek
+    Port 2220
+
+Host cp.dev.root
+    HostName dev.concreteplayground.com
+    User root
+    IdentityFIle ~/.ssh/astgeek
+    Port 2220
+
+Host cp.prod
+    HostName concreteplayground.com
+    User cpg
+    IdentityFile ~/.ssh/astgeek
+
+Host cp.prod.home
+    HostName concreteplayground.com
+    User cpg
+    IdentityFile ~/.ssh/astgeek
+    ForwardAgent yes
+    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p 
