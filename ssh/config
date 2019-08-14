@@ -29,3 +29,36 @@ Host ng
     User fastuser
     IdentityFile ~/.ssh/fastvps
 
+Host pixelroms
+    HostName 174.138.56.229
+    User forge
+    IdentityFile ~/.ssh/aws
+    ForwardAgent yes
+
+Host novads.root
+    HostName 207.154.249.196
+    User root
+    Port 6597
+    IdentityFile ~/.ssh/novads
+    # for editing remote files in sumblime
+    RemoteForward 52698 localhost:52698 
+
+Host novads
+    HostName 207.154.249.196
+    User nginx
+    Port 6597
+    IdentityFile ~/.ssh/novads
+    # for editing remote files in sumblime
+    RemoteForward 52698 localhost:52698
+
+Host m4trix.root
+    HostName 165.227.136.90
+    User root
+    Port 6597
+    IdentityFile ~/.ssh/novads
+
+Host m4trix
+    HostName 165.227.136.90
+    User nginx
+    Port 6597
+    IdentityFile ~/.ssh/novads

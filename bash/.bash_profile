@@ -2,6 +2,8 @@
 
 export PATH=$PATH:~/.composer/vendor/bin:/usr/local/bin
 export PATH=$PATH:~/Development/flutter/bin
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH=~/.composer/vendor/bin:$PATH
 
 dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
@@ -32,3 +34,10 @@ alias ssh-io="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-io;"
 alias ssh-dev1="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-dev1;"
 alias ssh-dev2="ssh-add -D; ssh-add ~/.ssh/accontech; ssh tb-dev2;"
 alias ssh-aws="ssh-add -D; ssh-add ~/.ssh/aws; ssh aws;"
+
+alias iphone-emulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/"
+alias android-emulator="~/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28 -netdelay none -netspeed full"
+
+alias chdownload="~/Downloads/downloadCourseHunters/download.sh"
+
+
