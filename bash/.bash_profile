@@ -32,7 +32,7 @@ alias dstats="docker stats --format \"table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage
 alias iphone-emulator="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/"
 alias android-emulator="~/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28 -netdelay none -netspeed full"
 alias chdownload="~/Downloads/downloadCourseHunters/download.sh"
-
+alias papertrail-restart="ssh root@novads papertrail-restart"
 # added by Anaconda3 5.3.1 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!

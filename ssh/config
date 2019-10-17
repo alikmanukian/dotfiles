@@ -50,10 +50,12 @@ Host cp.prod
     HostName concreteplayground.com
     User cpg
     IdentityFile ~/.ssh/astgeek
+    ForwardAgent yes
+    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
 
-Host cp.prod.home
+Host cp.prod.root
     HostName concreteplayground.com
-    User cpg
+    User root
     IdentityFile ~/.ssh/astgeek
     ForwardAgent yes
     ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
@@ -64,14 +66,6 @@ Host pixelroms
     IdentityFile ~/.ssh/aws
     ForwardAgent yes
 
-Host novads.root
-    HostName 207.154.249.196
-    User root
-    Port 6597
-    IdentityFile ~/.ssh/novads
-    # for editing remote files in sumblime
-    RemoteForward 52698 localhost:52698
-
 Host novads
     HostName 207.154.249.196
     User nginx
@@ -80,14 +74,28 @@ Host novads
     # for editing remote files in sumblime
     RemoteForward 52698 localhost:52698
 
-Host m4trix.root
-    HostName 165.227.136.90
-    User root
-    Port 6597
-    IdentityFile ~/.ssh/novads
-
 Host m4trix
     HostName 165.227.136.90
     User nginx
     Port 6597
     IdentityFile ~/.ssh/novads
+    RemoteForward 52698 localhost:52698
+
+Host presell
+    HostName 207.154.203.102
+    User nginx
+    Port 6597
+    IdentityFile ~/.ssh/novads
+    RemoteForward 52698 localhost:52698
+
+Host development
+    HostName 165.22.113.104
+    User ubuntu
+    Port 6597
+    IdentityFile ~/.ssh/novads
+    RemoteForward 52698 localhost:52698
+
+Host crypto.dev
+    HostName 31.31.77.194
+    User testtest
+    IdentityFile ~/.ssh/crypto
