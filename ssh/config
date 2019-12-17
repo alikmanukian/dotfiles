@@ -2,38 +2,68 @@ Host *
     ForwardAgent yes
 
 Host aws
-	HostName 52.20.119.173
-	User ubuntu
-	# IdentityFile ~/.ssh/aws-n-virginia.pem
-    IdentityFile ~/.ssh/aws
+	HostName 34.204.183.99
+    User ubuntu
+    Port 2209
+    IdentityFile ~/.ssh/terraform
+    ForwardAgent yes
+    RemoteForward 52698 localhost:52698
 
 Host veolia
     HostName 212.42.197.57
     User tigran
-	IdentityFile ~/.ssh/veolia
-
-Host veolia-interactive
-    HostName 212.42.197.55
-    User tigran
     IdentityFile ~/.ssh/veolia
+    ForwardAgent yes
+    RemoteForward 52698 localhost:52698
 
-Host mega
-    HostName mega-real.ru
-    User mega
+Host cp.dev
+    HostName dev.concreteplayground.com
+    User deploy
+    IdentityFIle ~/.ssh/astgeek
+    Port 2220
 
-Host mega.root
-    HostName mega-real.ru
+Host cp.dev.root
+    HostName dev.concreteplayground.com
     User root
+    IdentityFIle ~/.ssh/astgeek
+    Port 2220
 
-Host mega2.root
-    HostName 138.201.223.197
+Host cp.prod
+    HostName concreteplayground.com
+    User cpg
+    IdentityFile ~/.ssh/astgeek
+    ForwardAgent yes
+    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
+
+Host cp.prod.root
+    HostName concreteplayground.com
     User root
+    IdentityFile ~/.ssh/astgeek
+    ForwardAgent yes
+    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
 
-Host ng
-    HostName 46.36.217.31
-    User fastuser
-    IdentityFile ~/.ssh/fastvps
+Host pixelroms
+    HostName 174.138.56.229
+    User forge
+    IdentityFile ~/.ssh/aws
+    ForwardAgent yes
 
+Host novads
+    HostName 207.154.249.196
+    User nginx
+    Port 6597
+    IdentityFile ~/.ssh/novads
+    # for editing remote files in sumblime
+    RemoteForward 52698 localhost:52698
+
+Host m4trix
+    HostName 165.227.136.90
+    User nginx
+    Port 6597
+    IdentityFile ~/.ssh/novads
+    RemoteForward 52698 localhost:52698
+
+Host presell
 Host cp.dev
     HostName dev.concreteplayground.com
     User deploy
@@ -92,6 +122,13 @@ Host development
     HostName 165.22.113.104
     User ubuntu
     Port 6597
+    IdentityFile ~/.ssh/novads
+    RemoteForward 52698 localhost:52698
+
+Host dev-temp
+    HostName 167.172.128.91
+    User ubuntu
+    Port 22
     IdentityFile ~/.ssh/novads
     RemoteForward 52698 localhost:52698
 
