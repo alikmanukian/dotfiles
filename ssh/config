@@ -2,12 +2,12 @@ Host *
     ForwardAgent yes
 
 Host aws
-	HostName 34.204.183.99
+	HostName 35.171.47.23
     User ubuntu
     Port 2209
     IdentityFile ~/.ssh/terraform
     ForwardAgent yes
-    RemoteForward 52698 localhost:52698
+    # RemoteForward 52698 localhost:52698
 
 Host veolia
     HostName 212.42.197.57
@@ -15,80 +15,6 @@ Host veolia
     IdentityFile ~/.ssh/veolia
     ForwardAgent yes
     RemoteForward 52698 localhost:52698
-
-Host cp.dev
-    HostName dev.concreteplayground.com
-    User deploy
-    IdentityFIle ~/.ssh/astgeek
-    Port 2220
-
-Host cp.dev.root
-    HostName dev.concreteplayground.com
-    User root
-    IdentityFIle ~/.ssh/astgeek
-    Port 2220
-
-Host cp.prod
-    HostName concreteplayground.com
-    User cpg
-    IdentityFile ~/.ssh/astgeek
-    ForwardAgent yes
-    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
-
-Host cp.prod.root
-    HostName concreteplayground.com
-    User root
-    IdentityFile ~/.ssh/astgeek
-    ForwardAgent yes
-    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
-
-Host pixelroms
-    HostName 174.138.56.229
-    User forge
-    IdentityFile ~/.ssh/aws
-    ForwardAgent yes
-
-Host novads
-    HostName 207.154.249.196
-    User nginx
-    Port 6597
-    IdentityFile ~/.ssh/novads
-    # for editing remote files in sumblime
-    RemoteForward 52698 localhost:52698
-
-Host m4trix
-    HostName 165.227.136.90
-    User nginx
-    Port 6597
-    IdentityFile ~/.ssh/novads
-    RemoteForward 52698 localhost:52698
-
-Host presell
-Host cp.dev
-    HostName dev.concreteplayground.com
-    User deploy
-    IdentityFIle ~/.ssh/astgeek
-    Port 2220
-
-Host cp.dev.root
-    HostName dev.concreteplayground.com
-    User root
-    IdentityFIle ~/.ssh/astgeek
-    Port 2220
-
-Host cp.prod
-    HostName concreteplayground.com
-    User cpg
-    IdentityFile ~/.ssh/astgeek
-    ForwardAgent yes
-    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
-
-Host cp.prod.root
-    HostName concreteplayground.com
-    User root
-    IdentityFile ~/.ssh/astgeek
-    ForwardAgent yes
-    ProxyCommand ssh -i ~/.ssh/astgeek deploy@dev.concreteplayground.com -p 2220 -W %h:%p
 
 Host pixelroms
     HostName 174.138.56.229

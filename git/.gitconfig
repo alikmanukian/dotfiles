@@ -1,12 +1,12 @@
 [core]
 	excludesfile = /Users/alik/.gitignore
 	autocrlf = input
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+; [difftool "sourcetree"]
+;     cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+;     path =
+; [mergetool "sourcetree"]
+;     cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+;     trustExitCode = true
 [user]
 	name = Alexander Manukian
 	email = alikmanukian@gmail.com
@@ -32,5 +32,5 @@
     commit-as = "!f() { git commit --author \"$@\" }; f"
 [commit]
 	template = /Users/alik/.stCommitMsg
-[diff]
-	external = /Users/alik/dotfiles/git/git-diff-cmd.sh
+; [diff]
+;     external = /Users/alik/dotfiles/git/git-diff-cmd.sh
