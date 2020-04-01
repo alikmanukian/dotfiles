@@ -104,6 +104,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'wr'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+
 " убираем переменные из списка тегов
 let g:ctrlp_buftag_types = {
             \'php': '--php-kinds=icdf'

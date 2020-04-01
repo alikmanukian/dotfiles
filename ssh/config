@@ -2,7 +2,7 @@ Host *
     ForwardAgent yes
 
 Host aws
-	HostName 35.171.47.23
+	HostName 100.26.180.47
     User ubuntu
     Port 2209
     IdentityFile ~/.ssh/terraform
