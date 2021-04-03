@@ -19,7 +19,7 @@ createLink() {
     log "Creating symlink to $2"
 
     if [ -f $2 ]; then
-        read -p "Do you want to replace file $2? (y/n) " -n 1 -r 
+        read -p "Do you want to replace file $2? (y/n) " -n 1 -r
         echo #
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             rm $2
@@ -38,15 +38,10 @@ createLink `pwd`/bash/.bash_profile ~/.bash_profile
 
 createLink `pwd`/git/.gitconfig ~/.gitconfig
 
-if [ ! -d ~/.ssh ]; then
-    mkdir -m 700 ~/.ssh
-fi
-createLink `pwd`/ssh/config ~/.ssh/config
-
-if ! grep ". ~/.bash_profile" ~/.zshrc > /dev/null; then 
+if ! grep ". ~/.bash_profile" ~/.zshrc > /dev/null; then
 echo "
-if [ -f ~/.bash_profile ]; then 
-    . ~/.bash_profile 
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
 fi" >> ~/.zshrc
 fi
 

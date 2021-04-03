@@ -5,6 +5,8 @@ export PATH=$PATH:~/Development/flutter/bin
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export PATH=~/.composer/vendor/bin:$PATH
 export PATH=$PATH:/Users/alik/Library/Python/3.7/bin
+export PATH=$PATH:/usr/local/Cellar/php/7.4.10/bin/
+export PATH=$PATH:/Users/alik/.gem/ruby/2.7.0/bin
 
 dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
@@ -24,3 +26,6 @@ alias iphone-emulator="open /Applications/Xcode.app/Contents/Developer/Applicati
 alias android-emulator="~/Library/Android/sdk/emulator/emulator -avd Nexus_5X_API_28 -netdelay none -netspeed full"
 alias chdownload="~/Downloads/downloadCourseHunters/download.sh"
 alias papertrail-restart="ssh root@novads papertrail-restart"
+alias sail="bash vendor/bin/sail"
+
+complete -C /usr/local/bin/terraform terraform
