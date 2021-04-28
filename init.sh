@@ -23,10 +23,10 @@ createLink() {
         echo #
         if [[ $REPLY =~ ^[Yy]$ ]]; then
             rm $2
-            ln -s $1 $2
+            ln -nfs $1 $2
         fi
     else
-        ln -s $1 $2
+        ln -nfs $1 $2
     fi
 }
 
