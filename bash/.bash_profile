@@ -1,12 +1,9 @@
 # bash_profile
 
-export PATH=$PATH:~/.composer/vendor/bin:/usr/local/bin
-export PATH=$PATH:~/Development/flutter/bin
+export PATH=$PATH:~/.composer/vendor/bin
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-export PATH=~/.composer/vendor/bin:$PATH
-export PATH=$PATH:/Users/alik/Library/Python/3.7/bin
-export PATH=$PATH:/usr/local/Cellar/php/7.4.10/bin/
-export PATH=$PATH:/Users/alik/.gem/ruby/2.7.0/bin
+export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:/opt/homebrew/opt/php@8.0/bin
 
 dockip() {
   docker inspect --format '{{ .NetworkSettings.IPAddress }}' "$@"
@@ -28,4 +25,13 @@ alias chdownload="~/Downloads/downloadCourseHunters/download.sh"
 alias papertrail-restart="ssh root@novads papertrail-restart"
 alias sail="bash vendor/bin/sail"
 
-complete -C /usr/local/bin/terraform terraform
+# customized ----------------------------
+#
+# This enables Zsh to understand commands like docker run -it ubuntu
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+ 
+autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /opt/homebrew/bin/terraform terraform
+ 
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
