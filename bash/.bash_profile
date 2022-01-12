@@ -24,6 +24,9 @@ alias android-emulator="~/Library/Android/sdk/emulator/emulator -avd Nexus_5X_AP
 alias chdownload="~/Downloads/downloadCourseHunters/download.sh"
 alias papertrail-restart="ssh root@novads papertrail-restart"
 alias sail="bash vendor/bin/sail"
+alias a="sail artisan"
+alias debug="docker-compose exec -u sail -e XDEBUG_SESSION=1 -e PHP_IDE_CONFIG=\"serverName=MP\" app php artisan"
+alias tm="~/dotfiles/scripts/tmux.sh"
 
 # customized ----------------------------
 #
