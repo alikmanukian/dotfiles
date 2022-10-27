@@ -25,8 +25,12 @@ alias chdownload="~/Downloads/downloadCourseHunters/download.sh"
 alias papertrail-restart="ssh root@novads papertrail-restart"
 alias sail="bash vendor/bin/sail"
 alias a="sail artisan"
+alias pint="./vendor/bin/pint"
 alias debug="docker-compose exec -u sail -e XDEBUG_SESSION=1 -e PHP_IDE_CONFIG=\"serverName=MP\" app php artisan"
 alias tm="~/dotfiles/scripts/tmux.sh"
+alias php7="/opt/homebrew/Cellar/php@7.3/7.3.33_2/bin/php"
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias subl="sublime"
 
 # customized ----------------------------
 #

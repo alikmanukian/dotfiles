@@ -1,22 +1,27 @@
 SESSION=dev
 
-cd ~/Projects/novads
+cd ~/Projects
 tmux new-session -d -s $SESSION
 
-tmux new-window -t $SESSION:2 -n 'MP'
-tmux new-window -t $SESSION:3 -n 'construct'
-tmux new-window -t $SESSION:4 -n 'market'
-tmux new-window -t $SESSION:5 -n 'qoffer'
+
+tmux new-window -t $SESSION:2 -n 'homy'
+tmux new-window -t $SESSION:3 -n 'qoffer'
+tmux new-window -t $SESSION:4 -n 'samvel'
+tmux new-window -t $SESSION:5 -n 'husher'
 tmux kill-window -t $SESSION:1
 
-tmux select-window -t $SESSION:4
-tmux send-keys 'cd ~/Projects/qoffer/laravel' C-m
-tmux select-window -t $SESSION:3
-tmux send-keys 'cd ~/Projects/novads/market' C-m
-tmux select-window -t $SESSION:2
-tmux send-keys 'cd ~/Projects/novads/construct' C-m
 tmux select-window -t $SESSION:1
-tmux send-keys 'cd ~/Projects/novads/main-project' C-m
+tmux send-keys 'cd ~/Projects/coder/homy' C-m
+tmux select-window -t $SESSION:2
+tmux send-keys 'cd ~/Projects/qoffer/qoffer-laravel' C-m
+tmux select-window -t $SESSION:3
+tmux send-keys 'cd ~/Projects/coder/samvel' C-m
+tmux select-window -t $SESSION:4
+tmux send-keys 'cd ~/Projects/coder/husher.am' C-m
+
+tmux select-window -t $SESSION:1
+
+
 
 
 tmux attach -t $SESSION
