@@ -1,5 +1,5 @@
 # clone dotfiles if not exists
-DOTFILES_PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Development/dotfiles"
+DOTFILES_PATH="$HOME/Library/Mobile\ Documents/com~apple~CloudDocs/Development/dotfiles"
 
 if [ ! -d $DOTFILES_PATH ]; then
     mkdir -p $DOTFILES_PATH
