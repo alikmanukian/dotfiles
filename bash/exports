@@ -1,0 +1,2 @@
+export PATH=$HOME/Projects/Development/development/flutter_sdk/bin:$PATH
+export EDITOR=/opt/homebrew/bin/nvim

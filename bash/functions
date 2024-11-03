@@ -1,0 +1,12 @@
+trust_ssl_certificate() {
+	sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain $1
+}
+
+fcd() {
+    local dir
+    dir=$(find ${1:-.} -type d -not -path '*/\.*' 2> /dev/null | fzf +m) && cd "$dir"
+}
+
+findCountryByIp() {
+    curl https://ipinfo.io/$1/country
+}

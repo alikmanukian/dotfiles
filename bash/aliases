@@ -1,0 +1,14 @@
+
+# laravel
+alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias sa='sail artisan'
+alias pa='php artisan'
+alias a='php artisan'
+
+# macos
+alias sublime="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+alias subl="sublime"
+alias lg="lazygit"
+alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
+alias lsa="eza -la --tree --level=1 --icons=always"
+alias vi="nvim"
