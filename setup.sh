@@ -35,7 +35,7 @@ fi
 
 # create symlink for ~/.ssh
 if [ ! -L "$HOME/.ssh" ]; then
-    ln -sf "$DOTFILES_PATH/.ss"h "$HOME/.ssh"
+    ln -sf "$DOTFILES_PATH/.ssh" "$HOME/.ssh"
 fi
 
 # create symlink for ~/.tmux
